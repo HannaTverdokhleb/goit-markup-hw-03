@@ -23,8 +23,11 @@ body {
 img {
   display: block;
 }
+div {
+  box-sizing: border-box;
+}
 .container {
-  max-width: 1170px;
+  width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -120,6 +123,13 @@ p {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 .point-item {
   flex: 0 0 270px;
 }
@@ -131,6 +141,7 @@ p {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .text {
   color: var(--sub-text-color);
@@ -169,8 +180,15 @@ p {
   align-items: center;
   justify-content: space-between;
 }
+.image-item {
+  flex: 0 0 370px;
+}
 .image-item:not(:last-child) {
   margin-right: 30px;
+}
+.card-row {
+  margin-left: -30px;
+  margin-top: -30px;
 }
 .card {
   text-align: center;
@@ -178,17 +196,19 @@ p {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
     0 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
-  padding-bottom: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 120px) / 4);
 }
-.card:not(:last-child) {
-  margin-right: 30px;
+
+.card-info {
+  padding: 30px 32px;
 }
 .name {
   font-size: 16px;
   line-height: 1.2;
   font-weight: 500;
   text-transform: capitalize;
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 .position {
@@ -215,6 +235,9 @@ p {
 .address {
   color: var(--white-color);
   opacity: 1;
+}
+.address-item {
+  margin-top: 9px;
 }
 /* ====== portfolio-page ====== */
 
@@ -245,12 +268,14 @@ p {
   box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.portfolio-card:not(:nth-child(-n + 3)) {
-  margin-top: 30px;
+.portfolio-row {
+  margin-top: -30px;
+  margin-left: -30px;
 }
-
-.portfolio-card:not(:nth-child(3n + 3)) {
-  margin-right: 30px;
+.portfolio-card {
+  flex-basis: calc((100% - 90px) / 3);
+  margin-top: 30px;
+  margin-left: 30px;
 }
 .card-info {
   padding: 20px 24px;
@@ -262,6 +287,7 @@ p {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 .project-type {
   font-size: 16px;
