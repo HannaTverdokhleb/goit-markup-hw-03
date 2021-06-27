@@ -80,13 +80,13 @@ p {
 .logo {
   font-family: var(--secondary-font);
   font-size: 26px;
-  line-height: 1.2;
+  line-height: 1.19;
   font-weight: bold;
   letter-spacing: 0.03em;
 }
 .header {
   border-bottom: 1px solid var(--border-color);
-  padding: 25px 0;
+  padding: 24px 0 25px 0;
 }
 .header-logo {
   color: var(--black-color);
@@ -189,6 +189,9 @@ p {
 .image-item:not(:last-child) {
   margin-right: 30px;
 }
+.team-section {
+  background-color: var(--light-background);
+}
 .card-row {
   margin-left: -30px;
   margin-top: -30px;
@@ -203,7 +206,6 @@ p {
   margin-top: 30px;
   flex-basis: calc((100% - 120px) / 4);
 }
-
 .card-info {
   padding: 30px 32px;
 }
@@ -239,8 +241,8 @@ p {
   color: var(--white-color);
   opacity: 1;
 }
-.address-item {
-  margin-top: 9px;
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 /* ====== portfolio-page ====== */
 
@@ -280,7 +282,7 @@ p {
   margin-top: 30px;
   margin-left: 30px;
 }
-.card-info {
+.portfolio-info {
   padding: 20px 24px;
   border-bottom: 1px solid var(--secondary-border-color);
   border-left: 1px solid var(--secondary-border-color);
